@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
   box-shadow: 1px 5px 5px 2px rgb(0 0 0 / 50%);
-  background: rgb(41 132 245 / 80%);
+  background: rgba(216, 20, 167, 0.8);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border-radius: 10px;
