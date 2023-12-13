@@ -1,0 +1,50 @@
+<div class="main-container">
+  <div class="w-50 mx-auto mt-5 border border-dark" style="padding: 20px;">
+    <div class="mx-auto mt-3 mb-4" style="width: 200px">
+      <h4>Sign Up</h4>
+    </div>
+    <form class="form" action="/create" method="POST">
+      <div class="mb3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="f+orm-control" id="name" name="name" placeholder="John Doe" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="abc@email.com" name="email" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" name="password" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="Password" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required />
+      </div>
+      <!-- User role input -->
+      <div class="form-control">
+        <label class="form-label" for="role"></label>
+        <input type="text" class="login-form-input" placeholder="Select Role" />
+        <select class="login-form-input" id="role" name="role" aria-label="Default select example" required>
+          <option selected value="employee">Employee</option>
+          <option value="admin">Admin</option>
+        </select>
+      </div>
+      <!-- Buttons container -->
+      <div>
+        <!-- signup button -->
+        <button type="submit" class="login-button">
+          SIGN UP
+        </button>
+        <!-- google signup button button -->
+      </div>
+
+      <!-- Link to redierct to login page -->
+    </form>
+    <h5 class="bottom-heading">Already have an Account?</h5>
+    <div class="bottom-style">
+      <a href="/" class="login-button">Login</a>
+    </div>
+  </div>

@@ -1,0 +1,63 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Employee Review System</a>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <% if(locals.user) {%>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
+              <% if(locals.user.role==='admin' ) {%>
+                <li class="nav-item ms-lg-4">
+                  <a class="btn btn-secondary mx-2 l fw-semibold" href="/add-employee"></i> Add New Employee</a>
+                </li>
+                <%} %>
+            </ul>
+
+            <!-- <form class="d-flex justify-content-end right-0">
+                <div class="btn btn-secondary mx-2 l fw-semibold">
+                  Hello <%= user.username %>
+                </div>
+                <a class="btn btn-secondary mx-2 l fw-semibold" href="/sign-out">
+                  Sign Out</a>
+              </form> -->
+            <li class="nav-item dropdown">
+
+              <a class="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Welcome
+                <%=locals.user.username%>
+              </a>
+
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/sign-out">LogOut</a></li>
+              </ul>
+            </li>
+      </div>
+      <% } else {%>
+        <li class="nav-item">
+          <a class="nav-link" href="/sign-up">Create Account</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">Signin</a>
+        </li>
+        <%}%>
+          </ul>
+    </div>
+
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+    </div>
+  </nav>
+
+  <% if(locals.error) {%>
+    <div class="container mt-3">
+      <div class="alert alert-danger" role="alert">
+        <%= locals.error %>
+      </div>
+    </div>
+    <%}%>
+</header>
